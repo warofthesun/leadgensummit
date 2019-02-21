@@ -11,8 +11,12 @@
 				</div>
 				<span class="event-location">Nashville, TENN</span>
 				</div>
+				<div id="trigger-cloud-md-sm-wt-1">
+					<div class="cloud-medium-small-white" id="cloud-md-sm-wt-1"><img src="<?php echo get_template_directory_uri(); ?>/library/images/cloud-medium-small-white.png"></div>
+					<div class="cloud-medium-small-white cloud-medium-small-white__right" id="cloud-md-sm-wt-2"><img src="<?php echo get_template_directory_uri(); ?>/library/images/cloud-large-white.png"></div>
+				</div>
 				<section class="wrap row" style="margin-top: 5em;">
-						<main id="main" class="col-xs-12" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="col-xs-12 front-page" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -30,16 +34,17 @@
 												        if( get_row_layout() == 'content_section' ): ?>
 
 																<?php if( get_sub_field('header')) : ?>
-																	<span class="h-wrap" id="rsvp"><h1><?php the_sub_field('header'); ?></h1></span>
+																	<a class="anchor" id="<?php $anchor = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $anchor ); ?>"></a>
+																	<span class="h-wrap"><h1><?php the_sub_field('header'); ?></h1></span>
 																<?php endif;?>
 
 																<?php if( get_sub_field('include_form')) : ?>
-																	<div class="row">
+																	<div class="row" style="margin:1em 1em 8em;">
 																		<div class="col-xs-12 col-md-6"><?php the_sub_field('content'); ?></div>
 																		<div class="col-xs-12 col-md-6"><?php $form = get_sub_field('form'); echo do_shortcode($form); ?></div>
 																	</div>
 																<?php else : ?>
-																	<div class="row">
+																	<div class="row" style="margin:1em 1em 8em;">
 																		<div class="col-xs-12"><?php the_sub_field('content'); ?></div>
 																	</div>
 												        <?php endif; ?>

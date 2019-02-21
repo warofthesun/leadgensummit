@@ -139,7 +139,9 @@ em,
 hr {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
-  height: 0; }
+  height: 0;
+  border-top: 1px solid #123438;
+  border-bottom: 1px solid #478187; }
 
 /*
  * proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens)
@@ -1313,27 +1315,26 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.accent-btn, .comment-reply-link, #submit {
+.accent-btn, .comment-reply-link, #submit, input[type="submit"] {
   display: inline-block;
   position: relative;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "greasy_spoon", "Georgia", Cambria, Times New Roman, Times, serif;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 0.9em;
-  font-size: 34px;
-  line-height: 34px;
+  font-size: 2em;
+  line-height: 1;
   font-weight: normal;
-  padding: 0 24px;
+  padding: .25em 1em;
   border-radius: 4px;
   border: 0;
   cursor: pointer;
   -webkit-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out; }
-  .accent-btn:hover, .comment-reply-link:hover, #submit:hover, .accent-btn:focus, .comment-reply-link:focus, #submit:focus {
+  .accent-btn:hover, .comment-reply-link:hover, #submit:hover, input:hover[type="submit"], .accent-btn:focus, .comment-reply-link:focus, #submit:focus, input:focus[type="submit"] {
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     outline: none; }
-  .accent-btn:active, .comment-reply-link:active, #submit:active {
+  .accent-btn:active, .comment-reply-link:active, #submit:active, input:active[type="submit"] {
     top: 1px; }
 
 /*
@@ -1341,30 +1342,13 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.accent-btn, .comment-reply-link, #submit {
+.accent-btn, .comment-reply-link, #submit, input[type="submit"] {
   background-color: #EC5528; }
-  .accent-btn:hover, .comment-reply-link:hover, #submit:hover, .accent-btn:focus, .comment-reply-link:focus, #submit:focus {
+  .accent-btn:hover, .comment-reply-link:hover, #submit:hover, .accent-btn:focus, .comment-reply-link:focus, #submit:focus, input[type="submit"]:hover, input[type="submit"]:focus {
     background-color: #ea4615; }
-  .accent-btn:active, .comment-reply-link:active, #submit:active {
+  .accent-btn:active, .comment-reply-link:active, #submit:active, input[type="submit"]:active {
     background-color: #e64514; }
 
-/******************************************************************
-Site Name:
-Author:
-
-Stylesheet: Form Styles
-
-We put all the form and button styles in here to setup a consistent
-look. If we need to customize them, we can do this in the main
-stylesheets and just override them. Easy Peasy.
-
-You're gonna see a few data-uri thingies down there. If you're not
-sure what they are, check this link out:
-http://css-tricks.com/data-uris/
-If you want to create your own, use this helpful link:
-http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
-
-******************************************************************/
 /*********************
 INPUTS
 *********************/
@@ -1399,7 +1383,7 @@ textarea,
   border: 0;
   width: 100%;
   max-width: 400px;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #f7f8fa;
   -webkit-transition: background-color 0.24s ease-in-out;
   transition: background-color 0.24s ease-in-out; }
@@ -1627,7 +1611,8 @@ input[type="password"] {
 textarea {
   max-width: 100%;
   min-height: 120px;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  padding: 1em; }
 
 select {
   -webkit-appearance: none;
@@ -1638,18 +1623,53 @@ select {
   background-repeat: no-repeat;
   background-position: 97.5% center; }
 
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+  border: 1px solid #478187;
+  -webkit-box-shadow: inset 0 0 3px rgba(6, 76, 98, 0.7);
+          box-shadow: inset 0 0 3px rgba(6, 76, 98, 0.7); }
+
+input[type='checkbox']:checked {
+  background: #4AACB6; }
+
+.colleague p {
+  display: inline-block;
+  margin: 0; }
+
+.colleague .wpcf7-list-item {
+  margin-left: 0; }
+
+.colleague-checkbox .wpcf7-list-item-label {
+  display: none; }
+
+.wpcf7-response-output {
+  margin: 2em 0.5em 1em !important;
+  padding: 1em !important;
+  text-align: center !important;
+  border-radius: 3px !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1.2em !important; }
+
 /*********************
 BASE (MOBILE) SIZE
 *********************/
 /*********************
 GENERAL STYLES
 *********************/
+html {
+  scroll-behavior: smooth; }
+
 body {
   min-height: 100vh;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 100%;
-  line-height: 1.5;
-  color: #5c6b80;
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 105%;
+  line-height: 1.7;
+  color: rgba(18, 52, 56, 0.9);
+  letter-spacing: .5px;
   background-color: #A8DAE0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#DDF0F2), to(#A8DAE0));
   background-image: linear-gradient(to bottom, #DDF0F2, #A8DAE0);
@@ -1660,7 +1680,7 @@ body {
   font-family: "greasy_spoon", "Georgia", Cambria, Times New Roman, Times, serif; }
 
 .script {
-  font-family: "palm_canyon_drive", Helvetica, Arial, sans-serif; }
+  font-family: "palm_canyon_drive", "Great Vibes", cursive; }
 
 .dark {
   color: #123438; }
@@ -1668,9 +1688,34 @@ body {
 .accent {
   color: #EC5528; }
 
+.h6, h6 {
+  width: 80%;
+  margin: 2em auto;
+  margin-top: 0;
+  font-size: 1.3em; }
+  .h6 strong, h6 strong {
+    color: rgba(255, 255, 255, 0.9); }
+
+.front-page ul {
+  width: 60%;
+  margin: auto;
+  padding-top: 2em;
+  border-top: 1px solid #123438; }
+  .front-page ul li {
+    margin-bottom: 1em;
+    font-size: 1.1em; }
+    .front-page ul li:before {
+      content: "\f005";
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+      color: #EC5528;
+      font-size: .7em;
+      margin-right: .5em;
+      padding-bottom: .3px; }
+
 .event-info {
   text-align: center;
-  font-family: "palm_canyon_drive", Helvetica, Arial, sans-serif;
+  font-family: "palm_canyon_drive", "Great Vibes", cursive;
   font-size: 4em;
   color: #4AACB6; }
   .event-info .event-date {
@@ -1679,9 +1724,18 @@ body {
     border-right: 2px solid #EC5528;
     padding-right: 1em;
     margin-right: 1em; }
+    @media only screen and (max-width: 48em) {
+      .event-info .event-date {
+        margin-right: 0;
+        padding: 0;
+        border-right: 0px;
+        border-bottom: 2px solid #EC5528; } }
   .event-info .event-location {
     font-family: "greasy_spoon", "Georgia", Cambria, Times New Roman, Times, serif;
     color: #EC5528; }
+    @media only screen and (max-width: 48em) {
+      .event-info .event-location {
+        display: block; } }
 
 img {
   image-rendering: auto; }
@@ -1804,22 +1858,24 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   position: relative; }
   .h-wrap:before {
     content: "";
-    height: 10px;
+    height: 20px;
     width: 100%;
     background: #4AACB6;
     position: absolute;
     -webkit-transform: rotate(0.7deg);
             transform: rotate(0.7deg);
-    top: -3px; }
+    top: -3px;
+    left: -5px; }
   .h-wrap:after {
     content: "";
-    height: 10px;
+    height: 20px;
     width: 100%;
     background: #4AACB6;
     position: absolute;
     -webkit-transform: skewY(1deg);
             transform: skewY(1deg);
-    bottom: -3px; }
+    bottom: -3px;
+    right: -5px; }
 
 h1, .h1 {
   font-size: 4em;
@@ -1832,15 +1888,32 @@ h1, .h1 {
   z-index: 60; }
 
 h2, .h2 {
-  font-size: 2.75em;
+  font-size: 3.75em;
   margin-top: .5em;
-  line-height: 1.4em;
-  margin-bottom: 0.175em;
-  font-family: "palm_canyon_drive", Helvetica, Arial, sans-serif;
-  color: #064c62; }
+  line-height: 0.4;
+  margin-bottom: 0;
+  font-family: "palm_canyon_drive", "Great Vibes", cursive;
+  color: #064c62;
+  display: block;
+  position: relative;
+  z-index: 99; }
+  h2::after, .h2::after {
+    content: "";
+    width: 80%;
+    height: 5px;
+    background-color: #4AACB6;
+    position: relative;
+    display: block;
+    -webkit-transform: skewY(-1deg);
+            transform: skewY(-1deg);
+    z-index: 90;
+    top: -1px; }
 
 h3, .h3 {
-  font-size: 1.125em; }
+  font-size: 2.125em; }
+  h3.inline, .h3.inline {
+    display: inline-block;
+    margin-bottom: 0; }
 
 h4, .h4 {
   font-size: 1.1em;
@@ -1867,6 +1940,11 @@ h5, .h5 {
           flex-direction: column;
   position: relative;
   z-index: 50; }
+  @media only screen and (max-width: 48em) {
+    .logo-banner {
+      height: 100vh;
+      max-height: 550px;
+      width: 100%; } }
   .logo-banner .shadow {
     position: absolute;
     height: 90%;
@@ -1897,6 +1975,23 @@ h5, .h5 {
             flex-direction: column;
     position: relative;
     z-index: 50; }
+    @media only screen and (max-width: 48em) {
+      .logo-banner .bg-color {
+        height: 100vh; } }
+    .logo-banner .bg-color .primary-logo {
+      padding: 1em 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .logo-banner .bg-color .primary-logo img {
+        max-height: 450px; }
+        @media only screen and (max-width: 48em) {
+          .logo-banner .bg-color .primary-logo img {
+            width: 100%;
+            max-width: 350px; } }
   .logo-banner .button {
     background-color: #EC5528;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#f28d6e), to(#EC5528));
@@ -1914,6 +2009,10 @@ h5, .h5 {
     text-shadow: 1px 1px 5px rgba(77, 77, 77, 0.8);
     -webkit-transition: all .5s;
     transition: all .5s; }
+    @media only screen and (max-width: 48em) {
+      .logo-banner .button {
+        position: absolute;
+        bottom: 5px; } }
     .logo-banner .button:hover, .logo-banner .button:focus {
       background-color: #ee683f;
       background-image: -webkit-gradient(linear, left top, left bottom, from(#EC5528), to(#ee683f));
@@ -1944,6 +2043,12 @@ h5, .h5 {
     #mobile-nav.show .fa-chevron-down {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg); }
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -30px;
+  visibility: hidden; }
 
 .nav {
   border-bottom: 0;
@@ -1985,8 +2090,7 @@ h5, .h5 {
 
 /* end .nav */
 #content {
-  margin-top: 1.5em;
-  margin-bottom: 250px; }
+  margin-top: 1.5em; }
 
 article .hero--image img {
   width: 100%;
@@ -2370,6 +2474,9 @@ FOOTER STYLES
     -webkit-transition: all 1s;
     transition: all 1s;
     z-index: 65; }
+  @media only screen and (max-width: 48em) {
+    .city img {
+      width: 100%; } }
 
 .city-base {
   width: 100%;
@@ -2384,21 +2491,30 @@ FOOTER STYLES
 .cloud-large-blue {
   position: absolute;
   width: 700px;
-  margin-top: -300px;
+  margin-top: -350px;
   z-index: 10;
   opacity: 1;
   -webkit-transition: all .5s;
   transition: all .5s; }
+  @media only screen and (max-width: 48em) {
+    .cloud-large-blue {
+      width: 100%; } }
+  .cloud-large-blue__right {
+    right: 0;
+    margin-top: -200px; }
   .cloud-large-blue .fade {
     opacity: 0; }
   .cloud-large-blue img {
     width: 100%;
     height: auto; }
+    @media only screen and (max-width: 48em) {
+      .cloud-large-blue img {
+        max-width: 200px; } }
 
 .cloud-large-white {
-  position: absolute;
+  position: fixed;
   width: 600px;
-  margin-top: -340px;
+  top: 70vh;
   z-index: 15;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2413,20 +2529,28 @@ FOOTER STYLES
   height: 300px;
   overflow: hidden;
   padding-top: 1em;
-  opacity: 1;
+  opacity: .9;
   -webkit-transition: all .5s;
   transition: all .5s; }
-  .cloud-large-white .fade {
+  .cloud-large-white.fade {
     opacity: 0; }
+  .cloud-large-white.relative {
+    position: relative;
+    top: 0;
+    margin-top: -300px; }
   .cloud-large-white img {
     width: 100%;
     max-width: 750px;
     height: auto; }
+    @media only screen and (max-width: 48em) {
+      .cloud-large-white img {
+        max-width: 200px; } }
 
 .cloud-medium-white {
-  position: absolute;
+  position: fixed;
   width: 400px;
-  margin-top: -390px;
+  top: 80vh;
+  margin-left: -30vw;
   z-index: 15;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2443,11 +2567,45 @@ FOOTER STYLES
   padding-top: 1em;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  margin-left: -9em; }
+  opacity: .7;
+  -webkit-transition: all .5s;
+  transition: all .5s; }
+  .cloud-medium-white__right {
+    margin-right: -30vw;
+    right: 0; }
+    .cloud-medium-white__right.relative {
+      display: none; }
+  .cloud-medium-white.fade {
+    opacity: 0; }
+  .cloud-medium-white.relative {
+    top: 0;
+    position: relative;
+    margin-top: -450px;
+    margin-left: -15vw; }
   .cloud-medium-white img {
     width: 100%;
     max-width: 750px;
     height: auto; }
+    @media only screen and (max-width: 48em) {
+      .cloud-medium-white img {
+        max-width: 200px; } }
+
+.cloud-medium-small-white {
+  width: 250px;
+  position: fixed;
+  top: 25vh;
+  left: 10vw;
+  display: inline-block; }
+  .cloud-medium-small-white__right {
+    left: 70vw;
+    top: 15vh;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  @media only screen and (max-width: 48em) {
+    .cloud-medium-small-white {
+      display: none; } }
+  .cloud-medium-small-white img {
+    width: 100%; }
 
 .footer {
   clear: both;
@@ -2456,7 +2614,7 @@ FOOTER STYLES
   bottom: 0;
   width: 100%;
   position: relative;
-  z-index: 20; }
+  z-index: 70; }
 
 /*
 	if you checked out the link above:

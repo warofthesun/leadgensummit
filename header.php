@@ -51,7 +51,7 @@
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-				<div id="inner-header" class="wrap row">
+				<div id="inner-header" class="row">
 
 					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
@@ -73,8 +73,8 @@
 						<div class="shadow shadow__left"></div>
 						<div class="shadow shadow__right"></div>
 						<div class="bg-color">
-							<a href="<?php echo home_url(); ?>" rel="nofollow"><?php $image = wp_get_attachment_image_src(get_field('primary_logo', 'option'), 'full'); ?>
-							<img src="<?php echo $image[0]; ?>" style="max-height:550px;margin:auto;" alt="<?php echo get_the_title(get_field('primary_logo', 'option')) ?>" /></a>
+							<a class="primary-logo" href="<?php echo home_url(); ?>" rel="nofollow"><?php $image = wp_get_attachment_image_src(get_field('primary_logo', 'option'), 'full'); ?>
+							<img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('primary_logo', 'option')) ?>" /></a>
 							<a href="#rsvp" class="button">RSVP HERE</a>
 						</div>
 

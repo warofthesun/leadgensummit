@@ -152,11 +152,18 @@ em,
 /**
  * Address differences between Firefox and other browsers.
  */
+ $primary-lt:        #A8DAE0;
+ $primary:           #4AACB6;
+ $primary-md:        #478187;
+ $primary-md-dk:     #064c62;
+ $primary-dk:        #123438;
 
 hr {
     -moz-box-sizing: content-box;
     box-sizing: content-box;
     height: 0;
+    border-top: 1px solid $primary-dk;
+    border-bottom: 1px solid $primary-md;
 }
 
 /*

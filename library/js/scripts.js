@@ -130,22 +130,115 @@ jQuery(document).ready(function($) {
 
 			$(function() {
 		    var city = $(".city");
+				var large_white = $(".cloud-large-white");
+				var medium_white = $(".cloud-medium-white");
 		    $(window).scroll(function() {
 		        var scroll = $(window).scrollTop();
 
 		        if (scroll >= 30) {
 		            city.addClass("fade");
+								large_white.addClass("fade");
+								medium_white.addClass("fade");
 		        } else {
 		            city.removeClass("fade");
+								large_white.removeClass("fade");
+								medium_white.removeClass("fade");
 		        }
 
 						if (scroll >= 200) {
-		            city.removeClass('fixed fade').addClass("relative");
+		            city.removeClass('fade').addClass("relative");
+								large_white.removeClass('fade').addClass("relative");
+								medium_white.removeClass('fade').addClass("relative");
 		        } else {
-		            city.removeClass("relative").addClass('fixed');
+		            city.removeClass("relative");
+								large_white.removeClass("relative");
+								medium_white.removeClass("relative");
 		        }
 		    });
 		});
 
+			var cloud1path = {
+					entry : {
+						curviness: 1.0,
+						autoRotate: false,
+						values: [
+
+							{x: 5,	y: 10}
+
+							]
+					},
+
+					exit : {
+					curviness: 1.0,
+					autoRotate: false,
+					values: [
+
+							{x: -200,	y: 70},
+
+
+						]
+				},
+				};
+
+			var cloud2path = {
+					entry : {
+						curviness: 1.0,
+						autoRotate: false,
+						values: [
+
+							{x: 5,	y: 10}
+
+							]
+					},
+
+					exit : {
+					curviness: 1.0,
+					autoRotate: false,
+					values: [
+
+							{x: 200,	y: -70},
+
+
+						]
+				},
+				};
+			// init controller
+			var controller = new ScrollMagic.Controller();
+
+			// create cloud1 tween
+				var tweenCloud1 = new TimelineMax()
+					.add(TweenMax.to($("#cloud-md-sm-wt-1"), 1, {css:{bezier:cloud1path.entry}}))
+					.add(TweenMax.to($("#cloud-md-sm-wt-1"), 1, {css:{bezier:cloud1path.exit}}))
+
+				//build Cloud 1 Scene
+				var sceneCloud1 = new ScrollMagic.Scene({
+					duration: '100%',
+					offset: 0
+				})
+				.setPin("#trigger-cloud-md-sm-wt-1", {pushFollowers: false})
+				.setTween(tweenCloud1)
+				//.addIndicators({
+				//	name: "cloud-1",
+				//	indent: 100
+				//}) // add indicators (requires plugin)
+				.addTo(controller);
+
+			// create cloud2 tween
+				var tweenCloud2 = new TimelineMax()
+					.add(TweenMax.to($("#cloud-md-sm-wt-2"), 1, {css:{bezier:cloud2path.entry}}))
+					.add(TweenMax.to($("#cloud-md-sm-wt-2"), 1, {css:{bezier:cloud2path.exit}}))
+
+				//build Cloud 1 Scene
+				var sceneCloud1 = new ScrollMagic.Scene({
+					duration: '100%',
+					offset: 0
+				})
+				.setPin("#trigger-cloud-md-sm-wt-2", {pushFollowers: false})
+				.setTween(tweenCloud2)
+				//.addIndicators({
+				//	name: "cloud-1",
+				//	indent: 100
+				//}) // add indicators (requires plugin)
+				.addTo(controller);
 
 }); /* end of as page load scripts */
