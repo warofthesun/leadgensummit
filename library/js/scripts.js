@@ -127,11 +127,25 @@ jQuery(document).ready(function($) {
         $(".nav").toggleClass("show");
 				$("#mobile-nav").toggleClass("show");
 			});
-  /*
-   * Let's fire off the gravatar function
-   * You can remove this if you don't need it
-  */
-  loadGravatars();
+
+			$(function() {
+		    var city = $(".city");
+		    $(window).scroll(function() {
+		        var scroll = $(window).scrollTop();
+
+		        if (scroll >= 30) {
+		            city.addClass("fade");
+		        } else {
+		            city.removeClass("fade");
+		        }
+
+						if (scroll >= 200) {
+		            city.removeClass('fixed fade').addClass("relative");
+		        } else {
+		            city.removeClass("relative").addClass('fixed');
+		        }
+		    });
+		});
 
 
 }); /* end of as page load scripts */

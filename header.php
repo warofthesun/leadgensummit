@@ -53,13 +53,29 @@
 
 				<div id="inner-header" class="wrap row">
 
+					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						<?php wp_nav_menu(array(
+    					         'container' => false,                           // remove nav container
+    					         'container_class' => 'menu ',                 // class of container (should you choose to use it)
+    					         'menu' => __( 'The Left Nav', 'startertheme' ),  // nav name
+    					         'menu_class' => 'nav top-nav ',               // adding custom nav class
+    					         'theme_location' => 'left-nav',                 // where it's located in the theme
+    					         'before' => '',                                 // before the menu
+        			               'after' => '',                                  // after the menu
+        			               'link_before' => '',                            // before each link
+        			               'link_after' => '',                             // after each link
+        			               'depth' => 0,                                   // limit the depth of the nav
+    					         'fallback_cb' => ''                             // fallback function (if there is one)
+						)); ?>
+					</nav>
+
 					<div class="logo-banner">
 						<div class="shadow shadow__left"></div>
 						<div class="shadow shadow__right"></div>
 						<div class="bg-color">
 							<a href="<?php echo home_url(); ?>" rel="nofollow"><?php $image = wp_get_attachment_image_src(get_field('primary_logo', 'option'), 'full'); ?>
 							<img src="<?php echo $image[0]; ?>" style="max-height:550px;margin:auto;" alt="<?php echo get_the_title(get_field('primary_logo', 'option')) ?>" /></a>
-							<a href="#" class="button">RSVP HERE</a>
+							<a href="#rsvp" class="button">RSVP HERE</a>
 						</div>
 
 					</div>
@@ -68,9 +84,9 @@
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu ',                 // class of container (should you choose to use it)
-    					         'menu' => __( 'The Main Menu', 'startertheme' ),  // nav name
+    					         'menu' => __( 'The Right Nav', 'startertheme' ),  // nav name
     					         'menu_class' => 'nav top-nav ',               // adding custom nav class
-    					         'theme_location' => 'main-nav',                 // where it's located in the theme
+    					         'theme_location' => 'right-nav',                 // where it's located in the theme
     					         'before' => '',                                 // before the menu
         			               'after' => '',                                  // after the menu
         			               'link_before' => '',                            // before each link
@@ -78,7 +94,6 @@
         			               'depth' => 0,                                   // limit the depth of the nav
     					         'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
-
 					</nav>
 					<div id="mobile-nav">
 						Menu <i class="fas fa-chevron-down"></i>

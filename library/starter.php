@@ -192,6 +192,8 @@ function starter_theme_support() {
 	register_nav_menus(
 		array(
 			'main-nav' => __( 'The Main Menu', 'startertheme' ),   // main nav in header
+			'left-nav' => __( 'The Left Nav', 'startertheme' ),   // main nav in header
+			'right-nav' => __( 'The Right Nav', 'startertheme' ),   // main nav in header
 			'footer-links' => __( 'Footer Links', 'startertheme' ) // secondary nav in footer
 		)
 	);

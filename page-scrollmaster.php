@@ -17,6 +17,9 @@
 										<div id="target">
 											<img id="plane" src="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png" />
 										</div>
+										<div id="target">
+											<img id="plane2" src="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png" />
+										</div>
 										<div class="spacer s2"></div>
 										<script>
 										jQuery(function ($) { // wait for document ready
@@ -57,6 +60,7 @@
 
 												// create tween
 												var tween = new TimelineMax()
+												.add(TweenMax.to($("#plane2"), 5, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
 													.add(TweenMax.to($("#plane"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
 													.add(TweenMax.to($("#plane"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
 													.add(TweenMax.to($("#plane"), 1, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
@@ -67,6 +71,11 @@
 																.setTween(tween)
 																.addIndicators() // add indicators (requires plugin)
 																.addTo(controller);
+																var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 500, offset: 100})
+																				.setPin("#target")
+																				.setTween(tween)
+																				.addIndicators() // add indicators (requires plugin)
+																				.addTo(controller);
 											})
 										</script>
 

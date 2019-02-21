@@ -1686,7 +1686,16 @@ body {
 img {
   image-rendering: auto; }
 
-#inner-header, #inner-footer {
+#inner-header {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 5em; }
+
+#inner-footer {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1773,6 +1782,8 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   font-weight: 500;
+  font-family: "greasy_spoon", "Georgia", Cambria, Times New Roman, Times, serif;
+  color: #123438;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1781,14 +1792,52 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
     text-decoration: none; }
 
+.h-wrap {
+  width: 80%;
+  background-color: #4AACB6;
+  height: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 4em;
+  position: relative; }
+  .h-wrap:before {
+    content: "";
+    height: 10px;
+    width: 100%;
+    background: #4AACB6;
+    position: absolute;
+    -webkit-transform: rotate(0.7deg);
+            transform: rotate(0.7deg);
+    top: -3px; }
+  .h-wrap:after {
+    content: "";
+    height: 10px;
+    width: 100%;
+    background: #4AACB6;
+    position: absolute;
+    -webkit-transform: skewY(1deg);
+            transform: skewY(1deg);
+    bottom: -3px; }
+
 h1, .h1 {
-  font-size: 2.5em;
-  line-height: 1.333em; }
+  font-size: 4em;
+  line-height: 1.333em;
+  text-align: center;
+  margin-top: 0;
+  position: relative;
+  top: -.5em;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 60; }
 
 h2, .h2 {
-  font-size: 1.75em;
+  font-size: 2.75em;
+  margin-top: .5em;
   line-height: 1.4em;
-  margin-bottom: 0.375em; }
+  margin-bottom: 0.175em;
+  font-family: "palm_canyon_drive", Helvetica, Arial, sans-serif;
+  color: #064c62; }
 
 h3, .h3 {
   font-size: 1.125em; }
@@ -1911,6 +1960,8 @@ h5, .h5 {
   height: 0;
   -webkit-transition: all .5s;
   transition: all .5s;
+  font-family: "greasy_spoon", "Georgia", Cambria, Times New Roman, Times, serif;
+  font-size: 2em;
   /* end .menu li */
   /* highlight current page */
   /* end current highlighters */ }
@@ -1925,7 +1976,7 @@ h5, .h5 {
     text-align: center; }
     .nav li a {
       display: block;
-      color: rgba(255, 255, 255, 0.9);
+      color: #4AACB6;
       text-decoration: none;
       padding: 0.75em; }
     .nav li ul.sub-menu li a,
@@ -1934,7 +1985,8 @@ h5, .h5 {
 
 /* end .nav */
 #content {
-  margin-top: 1.5em; }
+  margin-top: 1.5em;
+  margin-bottom: 250px; }
 
 article .hero--image img {
   width: 100%;
@@ -2294,10 +2346,117 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
+.city {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: -7em;
+  z-index: 60;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  pointer-events: none; }
+  .city.fixed {
+    position: fixed;
+    opacity: 1;
+    -webkit-transition: all 1s;
+    transition: all 1s; }
+    .city.fixed.fade {
+      opacity: 0; }
+  .city.relative {
+    position: relative;
+    opacity: 1;
+    margin-bottom: -6em;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    z-index: 65; }
+
+.city-base {
+  width: 100%;
+  height: 100px;
+  background-color: #064c62;
+  position: relative;
+  z-index: 70;
+  border-top: 2px solid #4AACB6;
+  -webkit-box-shadow: 0 -2px 6px -2px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 -2px 6px -2px rgba(0, 0, 0, 0.7); }
+
+.cloud-large-blue {
+  position: absolute;
+  width: 700px;
+  margin-top: -300px;
+  z-index: 10;
+  opacity: 1;
+  -webkit-transition: all .5s;
+  transition: all .5s; }
+  .cloud-large-blue .fade {
+    opacity: 0; }
+  .cloud-large-blue img {
+    width: 100%;
+    height: auto; }
+
+.cloud-large-white {
+  position: absolute;
+  width: 600px;
+  margin-top: -340px;
+  z-index: 15;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 300px;
+  overflow: hidden;
+  padding-top: 1em;
+  opacity: 1;
+  -webkit-transition: all .5s;
+  transition: all .5s; }
+  .cloud-large-white .fade {
+    opacity: 0; }
+  .cloud-large-white img {
+    width: 100%;
+    max-width: 750px;
+    height: auto; }
+
+.cloud-medium-white {
+  position: absolute;
+  width: 400px;
+  margin-top: -390px;
+  z-index: 15;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 330px;
+  overflow: hidden;
+  padding-top: 1em;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-left: -9em; }
+  .cloud-medium-white img {
+    width: 100%;
+    max-width: 750px;
+    height: auto; }
+
 .footer {
   clear: both;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #f8f9fa; }
+  background-color: #064c62;
+  color: #f8f9fa;
+  bottom: 0;
+  width: 100%;
+  position: relative;
+  z-index: 20; }
 
 /*
 	if you checked out the link above:

@@ -1,5 +1,9 @@
+		<div class="city fixed"><img src="<?php echo get_template_directory_uri(); ?>/library/images/cityscape.png"></div>
+		<div class="city-base"></div>
+		<div class="cloud-large-blue"><img src="<?php echo get_template_directory_uri(); ?>/library/images/cloud-large-blue.png"></div>
+		<div class="cloud-medium-white"><img src="<?php echo get_template_directory_uri(); ?>/library/images/cloud-large-white.png"></div>
+		<div class="cloud-large-white"><img src="<?php echo get_template_directory_uri(); ?>/library/images/cloud-large-white.png"></div>
 			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
-
 				<div id="inner-footer" class="wrap  row">
 
 					<nav role="navigation">
@@ -29,7 +33,7 @@
 		<?php // all js scripts are loaded in library/starter.php ?>
 		<?php wp_footer(); ?>
 
-		
+
 
 	</body>
 
