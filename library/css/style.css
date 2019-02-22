@@ -1948,7 +1948,7 @@ h5, .h5 {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  z-index: 50; }
+  z-index: 70; }
   @media only screen and (max-width: 48em) {
     .logo-banner {
       height: calc(100vh - 20px);
@@ -1996,7 +1996,7 @@ h5, .h5 {
           -ms-flex-pack: center;
               justify-content: center; }
       .logo-banner .bg-color .primary-logo img {
-        max-height: 450px; }
+        max-height: 400px; }
         @media only screen and (max-width: 48em) {
           .logo-banner .bg-color .primary-logo img {
             width: 100%;
@@ -2465,13 +2465,10 @@ FOOTER STYLES
   position: fixed;
   bottom: 0;
   margin-bottom: -7em;
-  z-index: 60;
+  z-index: 65;
   -webkit-transition: all 1s;
   transition: all 1s;
   pointer-events: none; }
-  @media only screen and (max-width: 48em) {
-    .city {
-      z-index: 40; } }
   .city.fixed {
     position: fixed;
     opacity: 1;

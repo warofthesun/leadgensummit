@@ -338,7 +338,7 @@ h5, .h5 {
 	align-self: center;
 	flex-direction: column;
 	position: relative;
-	z-index: 50;
+	z-index: 70;
 
 	@media only screen and (max-width: 48em) {
 		height: calc(100vh - 20px);
@@ -387,7 +387,7 @@ h5, .h5 {
 			justify-content: center;
 
 			img {
-				max-height: 450px;
+				max-height: 400px;
 
 				@media only screen and (max-width: 48em) {
 					width: 100%;
@@ -1208,13 +1208,10 @@ FOOTER STYLES
 	position: fixed;
   bottom: 0;
   margin-bottom: -7em;
-	z-index: 60;
+	z-index: 65;
 	transition: all 1s;
 	pointer-events: none;
 
-	@media only screen and (max-width: 48em) {
-		z-index: 40;
-	}
 
 	&.fixed {
 		position: fixed;

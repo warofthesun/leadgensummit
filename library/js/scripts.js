@@ -163,7 +163,7 @@ jQuery(document).ready(function($) {
 						autoRotate: false,
 						values: [
 
-							{x: 5,	y: 10}
+							{x: 5,	y: -10}
 
 							]
 					},
@@ -186,7 +186,7 @@ jQuery(document).ready(function($) {
 						autoRotate: false,
 						values: [
 
-							{x: 5,	y: 10}
+							{x: 200,	y: 10}
 
 							]
 					},
@@ -196,7 +196,7 @@ jQuery(document).ready(function($) {
 					autoRotate: false,
 					values: [
 
-							{x: 200,	y: -70},
+							{x: 200,	y: 70},
 
 
 						]
@@ -207,12 +207,11 @@ jQuery(document).ready(function($) {
 
 			// create cloud1 tween
 				var tweenCloud1 = new TimelineMax()
-					.add(TweenMax.to($("#cloud-md-sm-wt-1"), 1, {css:{bezier:cloud1path.entry}}))
 					.add(TweenMax.to($("#cloud-md-sm-wt-1"), 1, {css:{bezier:cloud1path.exit}}))
 
 				//build Cloud 1 Scene
 				var sceneCloud1 = new ScrollMagic.Scene({
-					duration: '100%',
+					duration: '200%',
 					offset: 0
 				})
 				.setPin("#trigger-cloud-md-sm-wt-1", {pushFollowers: false})
@@ -226,7 +225,6 @@ jQuery(document).ready(function($) {
 			// create cloud2 tween
 				var tweenCloud2 = new TimelineMax()
 					.add(TweenMax.to($("#cloud-md-sm-wt-2"), 1, {css:{bezier:cloud2path.entry}}))
-					.add(TweenMax.to($("#cloud-md-sm-wt-2"), 1, {css:{bezier:cloud2path.exit}}))
 
 				//build Cloud 1 Scene
 				var sceneCloud1 = new ScrollMagic.Scene({
