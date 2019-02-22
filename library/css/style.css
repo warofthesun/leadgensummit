@@ -1693,6 +1693,9 @@ body {
   margin: 2em auto;
   margin-top: 0;
   font-size: 1.3em; }
+  @media only screen and (max-width: 48em) {
+    .h6, h6 {
+      width: 100%; } }
   .h6 strong, h6 strong {
     color: rgba(255, 255, 255, 0.9); }
 
@@ -1701,6 +1704,9 @@ body {
   margin: auto;
   padding-top: 2em;
   border-top: 1px solid #123438; }
+  @media only screen and (max-width: 48em) {
+    .front-page ul {
+      width: 100%; } }
   .front-page ul li {
     margin-bottom: 1em;
     font-size: 1.1em; }
@@ -1741,6 +1747,9 @@ img {
   image-rendering: auto; }
 
 #inner-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -2474,6 +2483,9 @@ FOOTER STYLES
     -webkit-transition: all 1s;
     transition: all 1s;
     z-index: 65; }
+    @media only screen and (max-width: 48em) {
+      .city.relative {
+        margin-bottom: -1.5em; } }
   @media only screen and (max-width: 48em) {
     .city img {
       width: 100%; } }
@@ -2498,10 +2510,14 @@ FOOTER STYLES
   transition: all .5s; }
   @media only screen and (max-width: 48em) {
     .cloud-large-blue {
-      width: 100%; } }
+      width: 100%;
+      margin-top: -265px; } }
   .cloud-large-blue__right {
     right: 0;
     margin-top: -200px; }
+    @media only screen and (max-width: 48em) {
+      .cloud-large-blue__right {
+        margin-top: -110px; } }
   .cloud-large-blue .fade {
     opacity: 0; }
   .cloud-large-blue img {
@@ -2538,6 +2554,9 @@ FOOTER STYLES
     position: relative;
     top: 0;
     margin-top: -300px; }
+    @media only screen and (max-width: 48em) {
+      .cloud-large-white.relative {
+        margin-top: -250px; } }
   .cloud-large-white img {
     width: 100%;
     max-width: 750px;
@@ -2582,6 +2601,10 @@ FOOTER STYLES
     position: relative;
     margin-top: -450px;
     margin-left: -15vw; }
+    @media only screen and (max-width: 48em) {
+      .cloud-medium-white.relative {
+        margin-left: 15vw;
+        max-width: 300px; } }
   .cloud-medium-white img {
     width: 100%;
     max-width: 750px;

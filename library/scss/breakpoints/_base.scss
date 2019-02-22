@@ -36,6 +36,12 @@ body {
 
 .h6, h6 {
 	width: 80%;
+
+	@media only screen and (max-width: 48em) {
+		width: 100%;
+	}
+
+
 	margin: 2em auto;
 	margin-top: 0;
 	font-size: 1.3em;
@@ -48,6 +54,11 @@ body {
 .front-page {
 	ul {
 		width: 60%;
+
+		@media only screen and (max-width: 48em) {
+			width: 100%;
+		}
+
 		margin: auto;
 		padding-top: 2em;
 		border-top: 1px solid $primary-dk;
@@ -105,6 +116,7 @@ img {
 }
 
 #inner-header {
+	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	margin-bottom: 5em;
@@ -1216,6 +1228,10 @@ FOOTER STYLES
 		margin-bottom: -6em;
 		transition: all 1s;
 		z-index: 65;
+
+		@media only screen and (max-width: 48em) {
+			margin-bottom: -1.5em;
+		}
 	}
 
 	@media only screen and (max-width: 48em) {
@@ -1245,11 +1261,16 @@ FOOTER STYLES
 
 	@media only screen and (max-width: 48em) {
 		width: 100%;
+		margin-top: -265px;
 	}
 
 	&__right {
 		right: 0;
 		margin-top: -200px;
+
+		@media only screen and (max-width: 48em) {
+			margin-top: -110px;
+		}
 	}
 
 	.fade {
@@ -1289,6 +1310,10 @@ FOOTER STYLES
 		position: relative;
 		top: 0;
 		margin-top: -300px;
+
+		@media only screen and (max-width: 48em) {
+			margin-top: -250px;
+		}
 	}
 
 	img {
@@ -1337,6 +1362,11 @@ FOOTER STYLES
 		position: relative;
 		margin-top: -450px;
 		margin-left: -15vw;
+
+		@media only screen and (max-width: 48em) {
+			margin-left: 15vw;
+			max-width: 300px;
+		}
 
 	}
 
