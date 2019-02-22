@@ -20,47 +20,23 @@
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+												<?php if( have_rows('home_content') ):
 
+											     // loop through the rows of data
+											    while ( have_rows('home_content') ) : the_row();
 
+										        if( get_row_layout() == 'content_section' ): ?>
 
-												<?php
+														<?php if( get_sub_field('header')) : ?>
+															<a class="anchor" id="<?php $anchor = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $anchor ); ?>"></a>
+															<span class="h-wrap"><h1><?php the_sub_field('header'); ?></h1></span>
+														<?php endif;?>
+															<div class="row" style="margin:1em 1em 8em;">
+																<div class="col-xs-12"><?php the_sub_field('content'); ?></div>
+															</div>
+													<?php endif; endwhile; else : endif; ?>
 
-												// check if the flexible content field has rows of data
-												if( have_rows('home_content') ):
-
-												     // loop through the rows of data
-												    while ( have_rows('home_content') ) : the_row();
-
-												        if( get_row_layout() == 'content_section' ): ?>
-
-																<?php if( get_sub_field('header')) : ?>
-																	<a class="anchor" id="<?php $anchor = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $anchor ); ?>"></a>
-																	<span class="h-wrap"><h1><?php the_sub_field('header'); ?></h1></span>
-																<?php endif;?>
-
-																<?php if( get_sub_field('include_form')) : ?>
-																	<div class="row" style="margin:1em 1em 8em;">
-																		<div class="col-xs-12 col-md-6"><?php the_sub_field('content'); ?></div>
-																		<div class="col-xs-12 col-md-6"><?php $form = get_sub_field('form'); echo do_shortcode($form); ?></div>
-																	</div>
-																<?php else : ?>
-																	<div class="row" style="margin:1em 1em 8em;">
-																		<div class="col-xs-12"><?php the_sub_field('content'); ?></div>
-																	</div>
-												        <?php endif; ?>
-																<?php endif; endwhile; else :
-
-												    // no layouts found
-
-												endif;
-
-												?>
-
-
-
-							<?php endwhile; ?>
-
-							<?php else : endif; ?>
+							<?php endwhile; else : endif; ?>
 
 						</main>
 
