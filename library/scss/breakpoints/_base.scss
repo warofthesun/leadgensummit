@@ -341,7 +341,7 @@ h5, .h5 {
 	z-index: 50;
 
 	@media only screen and (max-width: 48em) {
-		height: 100vh;
+		height: calc(100vh - 20px);
 		max-height: 550px;
 		width: 100%;
 	}
@@ -1211,6 +1211,10 @@ FOOTER STYLES
 	z-index: 60;
 	transition: all 1s;
 	pointer-events: none;
+
+	@media only screen and (max-width: 48em) {
+		z-index: 40;
+	}
 
 	&.fixed {
 		position: fixed;

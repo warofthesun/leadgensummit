@@ -1951,7 +1951,7 @@ h5, .h5 {
   z-index: 50; }
   @media only screen and (max-width: 48em) {
     .logo-banner {
-      height: 100vh;
+      height: calc(100vh - 20px);
       max-height: 550px;
       width: 100%; } }
   .logo-banner .shadow {
@@ -2469,6 +2469,9 @@ FOOTER STYLES
   -webkit-transition: all 1s;
   transition: all 1s;
   pointer-events: none; }
+  @media only screen and (max-width: 48em) {
+    .city {
+      z-index: 40; } }
   .city.fixed {
     position: fixed;
     opacity: 1;
