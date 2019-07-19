@@ -1202,6 +1202,72 @@ SIDEBARS & ASIDES
 FOOTER STYLES
 *********************/
 
+.sponsors {
+	width: 100%;
+	text-align: center;
+	position: fixed;
+  bottom: 0;
+	z-index: 70;
+	transition: all 1s;
+	pointer-events: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 1;
+	box-shadow: 0 0 6px (rgba(0,0,0,0.3));
+	@include css-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0.7));
+
+	@media only screen and (max-width: 48em) {
+		display: none !important;
+	}
+
+	&.fade {
+		opacity: 0;
+	}
+
+	&.relative {
+		opacity: 1;
+		transition: all 1s;
+		z-index: 99;
+		position: relative;
+		bottom: -438px;
+		box-shadow: 0 0 6px (rgba(0,0,0,0.0));
+		@include css-gradient(rgba(255,255,255,0.0),rgba(255,255,255,0.0));
+
+		ul {
+			li {
+				&:first-child {
+					color: $primary-lt;
+					border-right: 1px solid $primary-lt;
+				}
+			}
+		}
+	}
+
+	ul {
+		display: flex;
+
+		li {
+			display: flex;
+			align-items: center;
+			margin-right: 1em;
+
+			&:first-child {
+				text-transform: uppercase;
+				font-weight: bold;
+				color: $primary-md-dk;
+				border-right: 1px solid $primary-dk;
+				padding-right: 1em;
+			}
+
+			img {
+				max-height: 40px;
+				width: auto;
+			}
+		}
+	}
+}
+
 .city {
 	width: 100%;
 	text-align: center;

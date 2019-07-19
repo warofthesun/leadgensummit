@@ -115,9 +115,6 @@ Uncomment  the below to exclude first section from animation
 
 sr.reveal('.single-post');
 
-
-
-
 /*
  * Put all your regular jQuery in here.
 */
@@ -129,28 +126,28 @@ jQuery(document).ready(function($) {
 			});
 
 			$(function() {
-		    var city = $(".city");
+		    var fade = $(".fade-out");
 				var large_white = $(".cloud-large-white");
 				var medium_white = $(".cloud-medium-white");
 		    $(window).scroll(function() {
 		        var scroll = $(window).scrollTop();
 
 		        if (scroll >= 30) {
-		            city.addClass("fade");
+		            fade.addClass("fade");
 								large_white.addClass("fade");
 								medium_white.addClass("fade");
 		        } else {
-		            city.removeClass("fade");
+		            fade.removeClass("fade");
 								large_white.removeClass("fade");
 								medium_white.removeClass("fade");
 		        }
 
 						if (scroll >= 200) {
-		            city.removeClass('fade').addClass("relative");
+		            fade.removeClass('fade').addClass("relative");
 								large_white.removeClass('fade').addClass("relative");
 								medium_white.removeClass('fade').addClass("relative");
 		        } else {
-		            city.removeClass("relative");
+		            fade.removeClass("relative");
 								large_white.removeClass("relative");
 								medium_white.removeClass("relative");
 		        }

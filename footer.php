@@ -1,4 +1,36 @@
-		<div class="city fixed"><img src="<?php echo get_template_directory_uri(); ?>/library/images/cityscape.png"></div>
+		<div class="sponsors fade-out">
+			<?php if( have_rows('sponsors') ): ?>
+
+				<ul>
+					<li>sponsored by</li>
+				<?php // loop through the rows of data
+				while ( have_rows('sponsors') ) : the_row(); ?>
+				<?php
+					$image = get_sub_field('sponsor_logo');
+
+					if( !empty($image) ):
+					  // vars
+						$url = $image['url'];
+						$title = $image['title'];
+						$alt = $image['alt'];
+						$caption = $image['caption'];
+
+						// thumbnail
+						$size = 'medium';
+						$thumb = $image['sizes'][ $size ];
+						$width = $image['sizes'][ $size . '-width' ];
+						$height = $image['sizes'][ $size . '-height' ]; ?>
+
+
+
+
+				<li><img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>" width="<?php echo $width; ?>" height="<?php echo $height; ?>" /></li>
+				<?php endif; ?>
+			<?php endwhile; ?>
+			</ul>
+			<?php endif; ?>
+		</div>
+		<div class="city fixed fade-out"><img src="<?php echo get_template_directory_uri(); ?>/library/images/cityscape.png"></div>
 		<div class="city-base"></div>
 
 			<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
