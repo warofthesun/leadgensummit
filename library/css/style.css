@@ -1352,6 +1352,40 @@ and it will create a button dependant on those variables.
 /*********************
 INPUTS
 *********************/
+.forminator-ui {
+  width: 80%;
+  margin: 0 auto; }
+
+.forminator-row #submit {
+  font-size: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 200px;
+  float: none; }
+
+.forminator-row button {
+  font-family: inherit;
+  font-size: 100%;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 2em;
+  padding: .3em 0;
+  -webkit-box-shadow: 0 0 0 0;
+          box-shadow: 0 0 0 0;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100%;
+  letter-spacing: 1px; }
+
 input[type="text"],
 input[type="password"],
 input[type="datetime"],
@@ -1368,6 +1402,8 @@ input[type="tel"],
 input[type="color"],
 select,
 textarea,
+input[name="text-1"],
+input[name="text-2"],
 .field {
   display: block;
   height: 40px;
@@ -1418,6 +1454,10 @@ textarea,
   select:active,
   textarea:focus,
   textarea:active,
+  input[name="text-1"]:focus,
+  input[name="text-1"]:active,
+  input[name="text-2"]:focus,
+  input[name="text-2"]:active,
   .field:focus,
   .field:active {
     background-color: #fff;
@@ -1453,6 +1493,10 @@ textarea,
   select.is-invalid,
   textarea.error,
   textarea.is-invalid,
+  input[name="text-1"].error,
+  input[name="text-1"].is-invalid,
+  input[name="text-2"].error,
+  input[name="text-2"].is-invalid,
   .field.error,
   .field.is-invalid {
     color: #fbe3e4;
@@ -1493,6 +1537,10 @@ textarea,
   select.is-valid,
   textarea.success,
   textarea.is-valid,
+  input[name="text-1"].success,
+  input[name="text-1"].is-valid,
+  input[name="text-2"].success,
+  input[name="text-2"].is-valid,
   .field.success,
   .field.is-valid {
     color: #e6efc2;
@@ -1533,6 +1581,10 @@ textarea,
   select.is-disabled,
   textarea[disabled],
   textarea.is-disabled,
+  input[name="text-1"][disabled],
+  input[name="text-1"].is-disabled,
+  input[name="text-2"][disabled],
+  input[name="text-2"].is-disabled,
   .field[disabled],
   .field.is-disabled {
     cursor: not-allowed;
@@ -1599,6 +1651,14 @@ textarea,
     textarea[disabled]:active,
     textarea.is-disabled:focus,
     textarea.is-disabled:active,
+    input[name="text-1"][disabled]:focus,
+    input[name="text-1"][disabled]:active,
+    input[name="text-1"].is-disabled:focus,
+    input[name="text-1"].is-disabled:active,
+    input[name="text-2"][disabled]:focus,
+    input[name="text-2"][disabled]:active,
+    input[name="text-2"].is-disabled:focus,
+    input[name="text-2"].is-disabled:active,
     .field[disabled]:focus,
     .field[disabled]:active,
     .field.is-disabled:focus,
@@ -2524,6 +2584,9 @@ FOOTER STYLES
       .sponsors ul li img {
         max-height: 40px;
         width: auto; }
+
+.forminator-hidden {
+  display: none !important; }
 
 .city {
   width: 100%;
