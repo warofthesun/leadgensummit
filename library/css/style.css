@@ -1742,6 +1742,9 @@ body {
 .script {
   font-family: "palm_canyon_drive", "Great Vibes", cursive; }
 
+.sans {
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
 .dark {
   color: #123438; }
 
@@ -1777,6 +1780,70 @@ body {
       color: #EC5528;
       font-size: .7em;
       margin-right: .5em;
+      padding-bottom: .3px; }
+
+.agenda .indent {
+  width: 80%;
+  margin: 2em auto; }
+  @media only screen and (max-width: 48em) {
+    .agenda .indent {
+      width: 95%; } }
+
+.agenda sup {
+  color: #EC5528; }
+
+.agenda h2, .agenda .h2 {
+  margin-top: 2em;
+  margin-bottom: 1em; }
+  @media only screen and (max-width: 48em) {
+    .agenda h2, .agenda .h2 {
+      font-size: 1.9em; } }
+  .agenda h2:first-of-type, .agenda .h2:first-of-type {
+    margin-top: 0; }
+  .agenda h2::after, .agenda .h2::after {
+    content: "";
+    width: 80%;
+    height: 0px;
+    background-color: transparent; }
+
+.agenda ul {
+  width: 85%;
+  border-top: 0px;
+  margin: auto;
+  padding-top: 0em; }
+  @media only screen and (max-width: 48em) {
+    .agenda ul {
+      width: 100%; } }
+  .agenda ul li {
+    margin-bottom: 2em;
+    font-size: 1.2em; }
+    .agenda ul li:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .agenda ul li .left {
+      color: #EC5528;
+      font-family: "palm_canyon_drive", "Great Vibes", cursive;
+      font-size: 1em;
+      width: 180px;
+      display: inline-block;
+      line-height: .3;
+      border-bottom: 1px dotted #123438; }
+    .agenda ul li .right {
+      text-align: left; }
+      .agenda ul li .right:after {
+        content: "";
+        display: table;
+        clear: both; }
+    .agenda ul li .subline {
+      float: left;
+      font-size: .7em;
+      font-weight: bold;
+      margin-top: .3em;
+      color: #064c62; }
+    .agenda ul li:before {
+      content: "";
+      margin-right: 0em;
       padding-bottom: .3px; }
 
 .event-info {
@@ -1966,6 +2033,9 @@ h2, .h2 {
   display: block;
   position: relative;
   z-index: 99; }
+  @media only screen and (max-width: 48em) {
+    h2, .h2 {
+      font-size: 2.75em; } }
   h2::after, .h2::after {
     content: "";
     width: 80%;

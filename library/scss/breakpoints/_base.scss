@@ -26,6 +26,10 @@ body {
 	font-family: $script;
 }
 
+.sans {
+	font-family: $sans-serif;;
+}
+
 .dark {
 	color: $primary-dk;
 }
@@ -74,6 +78,98 @@ body {
 				color: $accent;
 				font-size: .7em;
 				margin-right: .5em;
+				padding-bottom: .3px;
+			}
+		}
+	}
+}
+
+.agenda {
+
+	.indent {
+		@media only screen and (max-width: 48em) {
+			width: 95%;
+		}
+		width: 80%;
+		margin: 2em auto;
+	}
+
+	sup {
+		color: $accent;
+	}
+
+	h2, .h2 {
+		margin-top: 2em;
+		margin-bottom: 1em;
+
+		@media only screen and (max-width: 48em) {
+			font-size: 1.9em;
+		}
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+		&::after {
+			content: "";
+			width:80%;
+			height: 0px;
+			background-color: transparent;
+		}
+	}
+
+
+	ul {
+		width: 85%;
+		border-top: 0px;
+
+		@media only screen and (max-width: 48em) {
+			width: 100%;
+		}
+
+		margin: auto;
+		padding-top: 0em;
+
+		li {
+			margin-bottom: 2em;
+			font-size: 1.2em;
+
+			&:after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+
+			.left {
+				color: $accent;
+				font-family: $script;
+				font-size: 1em;
+				width: 180px;
+				display: inline-block;
+				line-height: .3;
+				border-bottom: 1px dotted $primary-dk;
+			}
+
+			.right {
+				text-align: left;
+
+				&:after {
+					content: "";
+					display: table;
+					clear: both;
+				}
+			}
+
+			.subline {
+				float: left;
+				font-size: .7em;
+				font-weight: bold;
+				margin-top: .3em;
+				color: $primary-md-dk;
+			}
+
+			&:before {
+				content: "";
+				margin-right: 0em;
 				padding-bottom: .3px;
 			}
 		}
@@ -283,6 +379,10 @@ h1, .h1 {
 
 h2, .h2 {
 	font-size: 3.75em;
+
+	@media only screen and (max-width: 48em) {
+		font-size: 2.75em;
+	}
 	margin-top: .5em;
 	line-height: 0.4;
 	margin-bottom: 0;

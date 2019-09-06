@@ -26,7 +26,7 @@
 											    while ( have_rows('home_content') ) : the_row();
 
 										        if( get_row_layout() == 'content_section' ): ?>
-
+														<span class="<?php $anchor = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $anchor ); ?>">
 														<?php if( get_sub_field('header')) : ?>
 															<a class="anchor" id="<?php $anchor = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $anchor ); ?>"></a>
 															<span class="h-wrap"><h1><?php the_sub_field('header'); ?></h1></span>
@@ -34,6 +34,7 @@
 															<div class="row" style="margin:1em 1em 8em;">
 																<div class="col-xs-12"><?php the_sub_field('content'); ?></div>
 															</div>
+														</span>
 													<?php endif; endwhile; else : endif; ?>
 
 							<?php endwhile; else : endif; ?>
