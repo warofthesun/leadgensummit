@@ -51,6 +51,10 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     top: 1px; // adds a tiny hop to the click
   } // end active
 
+  &:visited {
+    color: $white;
+  }
+
 } // end .button
 
 /*

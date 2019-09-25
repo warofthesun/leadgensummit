@@ -146,11 +146,11 @@ body {
 				width: 180px;
 				display: inline-block;
 				line-height: .3;
-				border-bottom: 1px dotted $primary-dk;
 			}
 
 			.right {
 				text-align: left;
+				line-height: .7;
 
 				&:after {
 					content: "";
@@ -165,6 +165,32 @@ body {
 				font-weight: bold;
 				margin-top: .3em;
 				color: $primary-md-dk;
+			}
+
+			.panel {
+
+				div {
+					font-size: 2em;
+					color: $accent;
+					font-family: $script;
+					margin-top: 1em;
+				}
+
+				ul {
+					margin: 0;
+					margin-left: 2em;
+					font-size: .7em;
+
+					li {
+						font-style: italic;
+						margin-bottom: .5em;
+
+						strong {
+							display: block;
+							font-style: normal;
+						}
+					}
+				}
 			}
 
 			&:before {

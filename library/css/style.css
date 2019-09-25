@@ -1336,6 +1336,8 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
     outline: none; }
   .accent-btn:active, .comment-reply-link:active, #submit:active, input:active[type="submit"] {
     top: 1px; }
+  .accent-btn:visited, .comment-reply-link:visited, #submit:visited, input:visited[type="submit"] {
+    color: rgba(255, 255, 255, 0.9); }
 
 /*
 An example button.
@@ -1827,10 +1829,10 @@ body {
       font-size: 1em;
       width: 180px;
       display: inline-block;
-      line-height: .3;
-      border-bottom: 1px dotted #123438; }
+      line-height: .3; }
     .agenda ul li .right {
-      text-align: left; }
+      text-align: left;
+      line-height: .7; }
       .agenda ul li .right:after {
         content: "";
         display: table;
@@ -1841,6 +1843,21 @@ body {
       font-weight: bold;
       margin-top: .3em;
       color: #064c62; }
+    .agenda ul li .panel div {
+      font-size: 2em;
+      color: #EC5528;
+      font-family: "palm_canyon_drive", "Great Vibes", cursive;
+      margin-top: 1em; }
+    .agenda ul li .panel ul {
+      margin: 0;
+      margin-left: 2em;
+      font-size: .7em; }
+      .agenda ul li .panel ul li {
+        font-style: italic;
+        margin-bottom: .5em; }
+        .agenda ul li .panel ul li strong {
+          display: block;
+          font-style: normal; }
     .agenda ul li:before {
       content: "";
       margin-right: 0em;
