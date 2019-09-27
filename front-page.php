@@ -56,13 +56,17 @@
 																				<ul>
 																				<?php	while ( have_rows('agenda_items')): the_row(); ?>
 																						<li>
-																							<span class="left"><span class="sans" style="margin-right:.1em;display:inline;"><?php the_sub_field('start_time'); ?></span><?php the_sub_field('start_ampm');?><?php if(get_sub_field('end_time')): ?><span class="sans" style="margin-right:.1em;display:inline;">–<?php the_sub_field('end_time'); ?></span><?php the_sub_field('end_ampm'); ?></span><?php endif; ?>
+																							<span class="left">
+																								<span class="sans" style="margin-right:.1em;display:inline;"><?php the_sub_field('start_time'); ?></span><?php the_sub_field('start_ampm');?><?php if(get_sub_field('end_time')): ?><span class="sans" style="margin-right:.1em;display:inline;">–<?php the_sub_field('end_time'); ?></span><?php the_sub_field('end_ampm'); ?><?php endif; ?>
+																							</span>
 																							<span class="right"><?php the_sub_field('session_title'); ?></span>
 																							<?php if(get_sub_field('session_leader')): ?>
-																							<div class="left"></div><span class="subline"><?php the_sub_field('session_leader'); ?></span>
+																							<span class="left">&nbsp;</span><span class="subline"><?php the_sub_field('session_leader'); ?></span>
+																							<div style="clear: left;"></div>
 																							<?php endif;?>
 																							<?php if(get_sub_field('show_wysiwyg')): ?>
-																							<div class="left">hey</div><div class="right"><?php the_sub_field('wysiwyg'); ?></div>
+																								<span class="left">&nbsp;</span>
+																								<span class="right"><?php the_sub_field('wysiwyg'); ?></span>
 																							<?php endif;?>
 																						</li>
 																				<?php endwhile; ?>
