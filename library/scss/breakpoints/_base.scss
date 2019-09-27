@@ -132,6 +132,7 @@ body {
 		li {
 			margin-bottom: 2em;
 			font-size: 1.2em;
+			line-height: 1.2;
 
 			&:after {
 				content: "";
@@ -160,43 +161,42 @@ body {
 			}
 
 			.subline {
-				float: left;
 				font-size: .7em;
 				font-weight: bold;
-				margin-top: .3em;
 				color: $primary-md-dk;
-			}
-
-			.panel {
-
-				div {
-					font-size: 2em;
-					color: $accent;
-					font-family: $script;
-					margin-top: 1em;
-				}
-
-				ul {
-					margin: 0;
-					margin-left: 2em;
-					font-size: .7em;
-
-					li {
-						font-style: italic;
-						margin-bottom: .5em;
-
-						strong {
-							display: block;
-							font-style: normal;
-						}
-					}
-				}
+				margin-left: .6em;
 			}
 
 			&:before {
 				content: "";
 				margin-right: 0em;
 				padding-bottom: .3px;
+			}
+		}
+	}
+}
+
+.panel {
+
+	div {
+		font-size: 2em;
+		color: $accent;
+		font-family: $script;
+		margin-top: 1em;
+	}
+
+	ul {
+		margin: 0;
+		margin-left: 2em;
+		font-size: .7em;
+
+		li {
+			font-style: italic;
+			margin-bottom: .5em;
+
+			strong {
+				display: block;
+				font-style: normal;
 			}
 		}
 	}

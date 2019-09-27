@@ -35,8 +35,44 @@
 																<div class="col-xs-12"><?php the_sub_field('content'); ?></div>
 															</div>
 														</span>
-													<?php endif; endwhile; else : endif; ?>
+													<?php elseif( get_row_layout() == 'agenda_section' ): ?>
+														<span class="<?php $anchor = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $anchor ); ?>">
+															<?php if( get_sub_field('header')) : ?>
+																<a class="anchor" id="<?php $anchor = sanitize_title_for_query( get_sub_field('header') ); echo esc_attr( $anchor ); ?>"></a>
+																<span class="h-wrap"><h1><?php the_sub_field('header'); ?></h1></span>
+															<?php endif;?>
+															<?php if( have_rows('day_section')):
 
+															    while ( have_rows('day_section')): the_row();
+
+															        if( get_sub_field('header')):
+																        the_sub_field('header');
+																			endif;
+																			if( get_sub_field('wysiwyg')):
+																        the_sub_field('wysiwyg');
+																			endif;
+																			if( get_sub_field('agenda_items')):
+																        if( have_rows('agenda_items')): ?>
+																				<ul>
+																				<?php	while ( have_rows('agenda_items')): the_row(); ?>
+																						<li>
+																							<span class="left"><span class="sans" style="margin-right:.1em;display:inline;"><?php the_sub_field('start_time'); ?></span><?php the_sub_field('start_ampm');?><?php if(get_sub_field('end_time')): ?><span class="sans" style="margin-right:.1em;display:inline;">–<?php the_sub_field('end_time'); ?></span><?php the_sub_field('end_ampm'); ?></span><?php endif; ?>
+																							<span class="right"><?php the_sub_field('session_title'); ?></span>
+																							<?php if(get_sub_field('session_leader')): ?>
+																							<div class="left"></div><span class="subline"><?php the_sub_field('session_leader'); ?></span>
+																							<?php endif;?>
+																							<?php if(get_sub_field('show_wysiwyg')): ?>
+																							<div class="left">hey</div><div class="right"><?php the_sub_field('wysiwyg'); ?></div>
+																							<?php endif;?>
+																						</li>
+																				<?php endwhile; ?>
+																				</ul>
+																	<?php endif; ?>
+																	<?Php endif; endwhile; else : endif; ?>
+														</span>
+
+												<?php endif; endwhile; else : endif; ?>
+												<!-- end flexible -->
 							<?php endwhile; else : endif; ?>
 
 						</main>

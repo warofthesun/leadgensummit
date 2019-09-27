@@ -1818,7 +1818,8 @@ body {
       width: 100%; } }
   .agenda ul li {
     margin-bottom: 2em;
-    font-size: 1.2em; }
+    font-size: 1.2em;
+    line-height: 1.2; }
     .agenda ul li:after {
       content: "";
       display: table;
@@ -1838,30 +1839,31 @@ body {
         display: table;
         clear: both; }
     .agenda ul li .subline {
-      float: left;
       font-size: .7em;
       font-weight: bold;
-      margin-top: .3em;
-      color: #064c62; }
-    .agenda ul li .panel div {
-      font-size: 2em;
-      color: #EC5528;
-      font-family: "palm_canyon_drive", "Great Vibes", cursive;
-      margin-top: 1em; }
-    .agenda ul li .panel ul {
-      margin: 0;
-      margin-left: 2em;
-      font-size: .7em; }
-      .agenda ul li .panel ul li {
-        font-style: italic;
-        margin-bottom: .5em; }
-        .agenda ul li .panel ul li strong {
-          display: block;
-          font-style: normal; }
+      color: #064c62;
+      margin-left: .6em; }
     .agenda ul li:before {
       content: "";
       margin-right: 0em;
       padding-bottom: .3px; }
+
+.panel div {
+  font-size: 2em;
+  color: #EC5528;
+  font-family: "palm_canyon_drive", "Great Vibes", cursive;
+  margin-top: 1em; }
+
+.panel ul {
+  margin: 0;
+  margin-left: 2em;
+  font-size: .7em; }
+  .panel ul li {
+    font-style: italic;
+    margin-bottom: .5em; }
+    .panel ul li strong {
+      display: block;
+      font-style: normal; }
 
 .event-info {
   text-align: center;
