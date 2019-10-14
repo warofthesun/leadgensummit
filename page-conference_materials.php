@@ -23,7 +23,9 @@
 										   <?php while ( have_rows('conference_materials') ) : the_row(); ?>
 											 	<li>
  													<h2><?php the_sub_field('session_name'); ?></h2>
-													<h3><?php the_sub_field('session_presenter'); ?></h3>
+													<?php if( get_sub_field('session_presenter') ) : ?>
+														<h3><?php the_sub_field('session_presenter'); ?></h3>
+													<?php endif; ?>
 													<?php if( have_rows('downloads') ): ?>
 														<ul>
 															<?php while ( have_rows('downloads') ) : the_row(); ?>
@@ -42,9 +44,11 @@
 															<?php endwhile; ?>
 														</ul>
 													<?php endif; ?>
-													<div class="embed-container">
-													    <?php the_sub_field('video'); ?>
-													</div>
+													<?php if( get_sub_field('video') ) : ?>
+														<div class="embed-container">
+														    <?php the_sub_field('video'); ?>
+														</div>
+													<?php endif; ?>
 												</li>
 											<?php endwhile; ?>
 											</ul>
