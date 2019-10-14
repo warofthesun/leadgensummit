@@ -1347,7 +1347,7 @@ and it will create a button dependant on those variables.
 .accent-btn, .comment-reply-link, #submit, input[type="submit"] {
   background-color: #EC5528; }
   .accent-btn:hover, .comment-reply-link:hover, #submit:hover, .accent-btn:focus, .comment-reply-link:focus, #submit:focus, input[type="submit"]:hover, input[type="submit"]:focus {
-    background-color: #ea4615; }
+    background-color: #e14314; }
   .accent-btn:active, .comment-reply-link:active, #submit:active, input[type="submit"]:active {
     background-color: #e64514; }
 
@@ -1903,6 +1903,55 @@ body {
       .event-info .event-location {
         display: block; } }
 
+.conference_materials h2 {
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  line-height: 1; }
+  .conference_materials h2:after {
+    content: "";
+    display: none; }
+
+.conference_materials h3 {
+  font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1; }
+  .conference_materials h3:after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 2px solid #478187;
+    margin-top: 1em; }
+
+.conference_materials ul li {
+  display: inline;
+  margin-right: 2em; }
+  @media only screen and (max-width: 48em) {
+    .conference_materials ul li {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 1em;
+      display: inline-block; }
+      .conference_materials ul li .accent-btn, .conference_materials ul li .comment-reply-link, .conference_materials ul li #submit {
+        width: 100%;
+        text-align: center; } }
+
+.conference_materials .embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto; }
+
+.conference_materials .embed-container iframe,
+.conference_materials .embed-container object,
+.conference_materials .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 img {
   image-rendering: auto; }
 
@@ -1917,6 +1966,8 @@ img {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-bottom: 5em; }
+  #inner-header.inner-header {
+    margin-bottom: 0; }
 
 #inner-footer {
   -webkit-box-orient: vertical;
@@ -2112,11 +2163,49 @@ h5, .h5 {
           flex-direction: column;
   position: relative;
   z-index: 70; }
+  .logo-banner.secondary {
+    justify-items: flex-start;
+    margin-right: auto;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    @media only screen and (max-width: 48em) {
+      .logo-banner.secondary {
+        height: auto; } }
+    .logo-banner.secondary .page-title {
+      margin: auto auto 0 0;
+      font-family: "palm_canyon_drive", "Great Vibes", cursive;
+      color: #123438;
+      font-size: 5em; }
+      @media only screen and (max-width: 48em) {
+        .logo-banner.secondary .page-title {
+          font-size: 3em;
+          text-align: left; } }
   @media only screen and (max-width: 48em) {
     .logo-banner {
       height: calc(100vh - 20px);
       max-height: 550px;
       width: 100%; } }
+  .logo-banner .secondary-logo {
+    margin: -1em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 3em; }
+    @media only screen and (max-width: 48em) {
+      .logo-banner .secondary-logo {
+        margin-right: 1em; } }
+    .logo-banner .secondary-logo img {
+      max-width: 200px; }
+      @media only screen and (max-width: 48em) {
+        .logo-banner .secondary-logo img {
+          width: 100%;
+          max-width: 150px; } }
   .logo-banner .shadow {
     position: absolute;
     height: 90%;

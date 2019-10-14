@@ -8,7 +8,7 @@ gulp.task('watch', function(){
   // Other watchers
   browserSync.init({
         port: 8200,
-        proxy: "http://localhost/summit"
+        proxy: "http://localhost:8000"
     });
     gulp.watch("./*.php").on("change", browserSync.reload);
     gulp.watch("./library/scss/**/*.scss").on("change", browserSync.reload);
