@@ -17,7 +17,8 @@
 							<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<section class="entry-content " itemprop="articleBody">
-
+									<?php the_content(); ?>
+									<?php if( !post_password_required( $post )): ?>
 									<?php if( have_rows('conference_materials') ): ?>
 										 	<ul>
 										   <?php while ( have_rows('conference_materials') ) : the_row(); ?>
@@ -53,7 +54,7 @@
 											<?php endwhile; ?>
 											</ul>
 									<?php	else : endif;	?>
-
+									<?php endif; ?>
 								</section>
 
 							</article>

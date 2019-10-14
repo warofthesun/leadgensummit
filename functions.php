@@ -347,4 +347,12 @@ if( function_exists('acf_add_options_page') ) {
 include('inc/acf/acf-fields.php');
 
 }
+
+/**
+* Removes or edits the 'Protected:' part from posts titles
+*/
+add_filter( 'protected_title_format', 'remove_protected_text' );
+function remove_protected_text() {
+return __('%s');
+}
 /* DON'T DELETE THIS CLOSING TAG */ ?>
