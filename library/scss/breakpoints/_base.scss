@@ -276,7 +276,13 @@ body {
 		}
 	}
 
-	ul {
+	ul.material_sections {
+		li {
+			margin-bottom: 5em;
+		}
+	}
+
+	ul.material_buttons {
 		li {
 			display: inline;
 			margin-right: 2em;
@@ -566,10 +572,23 @@ h5, .h5 {
 			margin: auto auto 0 0;
 			font-family: $script;
 			color: $primary-md;
-			font-size: 5em;
+			font-size: 6em;
+
+			.title_line_one {
+				line-height: 1;
+				margin-bottom: -.4em;
+				display: block;
+				color: $primary;
+			}
+			.title_line_two {
+				font-family: $slab;
+				display: block;
+				line-height: 1;
+				color: $primary-md;
+			}
 
 			@media only screen and (max-width: 48em) {
-				font-size: 3em;
+				font-size: 4em;
 				text-align: left;
 			}
 		}

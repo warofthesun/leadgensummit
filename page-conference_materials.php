@@ -20,7 +20,7 @@
 									<?php the_content(); ?>
 									<?php if( !post_password_required( $post )): ?>
 									<?php if( have_rows('conference_materials') ): ?>
-										 	<ul>
+										 	<ul class="material_sections">
 										   <?php while ( have_rows('conference_materials') ) : the_row(); ?>
 											 	<li>
  													<h2><?php the_sub_field('session_name'); ?></h2>
@@ -28,7 +28,7 @@
 														<h3><?php the_sub_field('session_presenter'); ?></h3>
 													<?php endif; ?>
 													<?php if( have_rows('downloads') ): ?>
-														<ul>
+														<ul class="material_buttons">
 															<?php while ( have_rows('downloads') ) : the_row(); ?>
 																<li>
 																	<?php

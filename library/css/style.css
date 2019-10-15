@@ -1923,16 +1923,19 @@ body {
     border-bottom: 2px solid #478187;
     margin-top: 1em; }
 
-.conference_materials ul li {
+.conference_materials ul.material_sections li {
+  margin-bottom: 5em; }
+
+.conference_materials ul.material_buttons li {
   display: inline;
   margin-right: 2em; }
   @media only screen and (max-width: 48em) {
-    .conference_materials ul li {
+    .conference_materials ul.material_buttons li {
       width: 100%;
       margin-right: 0;
       margin-bottom: 1em;
       display: inline-block; }
-      .conference_materials ul li .accent-btn, .conference_materials ul li .comment-reply-link, .conference_materials ul li #submit {
+      .conference_materials ul.material_buttons li .accent-btn, .conference_materials ul.material_buttons li .comment-reply-link, .conference_materials ul.material_buttons li #submit {
         width: 100%;
         text-align: center; } }
 
@@ -2181,10 +2184,20 @@ h5, .h5 {
       margin: auto auto 0 0;
       font-family: "palm_canyon_drive", "Great Vibes", cursive;
       color: #478187;
-      font-size: 5em; }
+      font-size: 6em; }
+      .logo-banner.secondary .page-title .title_line_one {
+        line-height: 1;
+        margin-bottom: -.4em;
+        display: block;
+        color: #4AACB6; }
+      .logo-banner.secondary .page-title .title_line_two {
+        font-family: "greasy_spoon", "Georgia", Cambria, Times New Roman, Times, serif;
+        display: block;
+        line-height: 1;
+        color: #478187; }
       @media only screen and (max-width: 48em) {
         .logo-banner.secondary .page-title {
-          font-size: 3em;
+          font-size: 4em;
           text-align: left; } }
   @media only screen and (max-width: 48em) {
     .logo-banner {

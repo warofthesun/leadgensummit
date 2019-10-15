@@ -90,7 +90,14 @@
 					<div class="logo-banner secondary">
 							<a class="secondary-logo" href="<?php echo home_url(); ?>" rel="nofollow"><?php $image = wp_get_attachment_image_src(get_field('secondary_logo', 'option'), 'full'); ?>
 							<img src="<?php echo $image[0]; ?>" alt="<?php echo get_the_title(get_field('secondary_logo', 'option')) ?>" /></a>
-							<h1 class="page-title"><?php the_title(); ?></h1>
+							<?php if( get_field('title_line_one') ) : ?>
+								<h1 class="page-title">
+									<span class="title_line_one"><?php the_field('title_line_one'); ?></span>
+									<span class="title_line_two"><?php the_field('title_line_two'); ?></span>
+								</h1>
+							<?php else : ?>
+								<h1 class="page-title"><?php the_title(); ?></h1>
+							<?php endif; ?>
 					</div>
 
 
