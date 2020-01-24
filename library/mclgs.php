@@ -137,10 +137,6 @@ function starter_scripts_and_styles() {
 	}
 }
 
-
-
-
-
 /*********************
 THEME SUPPORT
 *********************/

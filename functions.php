@@ -1,7 +1,7 @@
 <?php
 
 // LOAD starter CORE (if you remove this, the theme will break)
-require_once( 'library/starter.php' );
+require_once( 'library/mclgs.php' );
 
 // CUSTOMIZE THE WORDPRESS ADMIN (off by default)
 // require_once( 'library/admin.php' );
@@ -290,12 +290,6 @@ function scrollmagic_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'scrollmagic_scripts' );
 
-
-
-/**
- * Register the required plugins for this theme.
- *
- */
 
 include 'inc/required-plugs.php';
 

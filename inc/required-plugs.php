@@ -10,126 +10,106 @@ function my_theme_register_required_plugins() {
 	 */
 	$plugins = array(
 
-    // GitHub Updater
+		// Lazy Load
 		array(
-			'name'     				=> 'GitHub Updater', // The plugin name
-			'slug'     				=> 'github-updater-develop', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://github.com/afragen/github-updater/archive/develop.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+			'name'     				=> 'BJ LazyLoad',
+			'slug'     				=> 'bj-lazy-load',
+			'source'   				=> 'https://downloads.wordpress.org/plugin/bj-lazy-load.zip',
+			'required' 				=> false,
+			'version' 				=> '1.0.9',
+			'force_activation' 		=> false,
+			'force_deactivation' 	=> false,
+			'external_url' 			=> '',
 		),
 
-    // W3 Total Cache
+    // Classic Editor
 		array(
-			'name'     				=> 'W3 Total Cache', // The plugin name
-			'slug'     				=> 'w3-total-cache', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://downloads.wordpress.org/plugin/w3-total-cache.0.9.6.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '0.9', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+			'name'     				=> 'Classic Editor',
+			'slug'     				=> 'classic-editor',
+			'source'   				=> 'https://downloads.wordpress.org/plugin/classic-editor.zip',
+			'required' 				=> false,
+			'version' 				=> '1.5',
+			'force_activation' 		=> false,
+			'force_deactivation' 	=> false,
+			'external_url' 			=> '',
+		),
+
+		// Flamingo
+		array(
+			'name'     				=> 'Flamingo',
+			'slug'     				=> 'flamingo',
+			'source'   				=> 'https://downloads.wordpress.org/plugin/flamingo.zip',
+			'required' 				=> false,
+			'version' 				=> '2.1',
+			'force_activation' 		=> false,
+			'force_deactivation' 	=> false,
+			'external_url' 			=> '',
+		),
+
+		// Forminator
+		array(
+			'name'     				=> 'Forminator',
+			'slug'     				=> 'forminator',
+			'source'   				=> 'https://downloads.wordpress.org/plugin/forminator.zip',
+			'required' 				=> false,
+			'version' 				=> '1.11',
+			'force_activation' 		=> false,
+			'force_deactivation' 	=> false,
+			'external_url' 			=> '',
+		),
+
+		// Hotjar
+		array(
+			'name'     				=> 'Hotjar',
+			'slug'     				=> 'hotjar',
+			'source'   				=> 'https://downloads.wordpress.org/plugin/hotjar.zip',
+			'required' 				=> false,
+			'version' 				=> '1.0',
+			'force_activation' 		=> false,
+			'force_deactivation' 	=> false,
+			'external_url' 			=> '',
+		),
+
+		// PDF Embedder
+		array(
+			'name'     				=> 'PDF Embedder',
+			'slug'     				=> 'pdf-embedder',
+			'source'   				=> 'https://downloads.wordpress.org/plugin/pdf-embedder.zip',
+			'required' 				=> false,
+			'version' 				=> '4.6',
+			'force_activation' 		=> false,
+			'force_deactivation' 	=> false,
+			'external_url' 			=> '',
 		),
 
     // UpdraftPlus
 		array(
-			'name'     				=> 'UpdraftPlus', // The plugin name
-			'slug'     				=> 'updraftplus', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://downloads.wordpress.org/plugin/updraftplus.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.14', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+			'name'     				=> 'UpdraftPlus',
+			'slug'     				=> 'updraftplus',
+			'source'   				=> 'https://downloads.wordpress.org/plugin/updraftplus.zip',
+			'required' 				=> false,
+			'version' 				=> '1.14',
+			'force_activation' 		=> false,
+			'force_deactivation' 	=> false,
+			'external_url' 			=> '',
 		),
 
-    // Wordfence
+    // Yoast
 		array(
-			'name'     				=> 'Wordfence Security', // The plugin name
-			'slug'     				=> 'wordfence', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://downloads.wordpress.org/plugin/wordfence.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '6.3', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		),
-
-    // Google Analytics
-		// array(
-		// 	'name'     				=> 'Google Analytics Dashboard for WP', // The plugin name
-		// 	'slug'     				=> 'google-analytics-dashboard-for-wp', // The plugin slug (typically the folder name)
-		// 	'source'   				=> 'https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.zip', // The plugin source
-		// 	'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-		// 	'version' 				=> '5.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-		// 	'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-		// 	'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-		// 	'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		// ),
-
-    // Regenerate Thumbnails
-		array(
-			'name'     				=> 'Regenerate Thumbnails', // The plugin name
-			'slug'     				=> 'regenerate-thumbnails', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://downloads.wordpress.org/plugin/regenerate-thumbnails.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '3.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		),
-
-    // Simple WP Sitemap
-		array(
-			'name'     				=> 'Simple WP Sitemap', // The plugin name
-			'slug'     				=> 'simple-wp-sitemap', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://downloads.wordpress.org/plugin/simple-wp-sitemap.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.2', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		),
-
-    // Smush
-		array(
-			'name'     				=> 'Smush Image Compression and Optimization', // The plugin name
-			'slug'     				=> 'wp-smushit', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://downloads.wordpress.org/plugin/wp-smushit.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '2.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		),
-
-    // Lazy Load
-		array(
-			'name'     				=> 'BJ LazyLoad', // The plugin name
-			'slug'     				=> 'bj-lazy-load', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://downloads.wordpress.org/plugin/bj-lazy-load.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.0.9', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+			'name'     				=> 'Yoast',
+			'slug'     				=> 'wordpress-seo',
+			'source'   				=> 'https://downloads.wordpress.org/plugin/wordpress-seo.zip',
+			'required' 				=> false,
+			'version' 				=> '12.9',
+			'force_activation' 		=> false,
+			'force_deactivation' 	=> false,
+			'external_url' 			=> '',
 		),
 
 	);
 
-	// Change this to your theme text domain, used for internationalising strings
 	$theme_text_domain = 'StarterTheme';
 
-	/**
-	 * Array of configuration settings. Amend each line as needed.
-	 * If you want the default strings to be available under your own theme domain,
-	 * leave the strings uncommented.
-	 * Some of the strings are added into a sprintf, so see the comments at the
-	 * end of each line for what each argument will be.
-	 */
 	$config = array(
 		'domain'       		=> $theme_text_domain,         	// Text domain - likely want to be the same as your theme.
 		'default_path' 		=> '',                         	// Default absolute path to pre-packaged plugins
